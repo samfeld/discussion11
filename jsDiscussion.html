@@ -21,16 +21,20 @@
 
 		
 		// 1. Change the h1 element to your name.
-
+		document.querySelector("h1").innerHTML="Sam Feldman";
 
 
 		// 2. Update the three span elements using ONLY JavaScript
 
-
+		document.getElementById("URL").innerHTML=document.URL;
+		document.getElementById("items").innerHTML=document.querySelectorAll("li").length;
+		console.log(document.querySelectorAll("li").length)
+		document.getElementById("time").innerHTML=new Date();
 
 		// 3. Change the background color and margin for the entire page.
-	
-
+		
+		document.body.style.background = "pink";
+		document.body.style.margin="20px";
 
     }
 
@@ -38,11 +42,13 @@
     // Each occurence should be on a separate line.  Don't use 
     // paragraphs. 
 
-		
+		function copyFunction(){
+			document.querySelector("#cheer").innerHTML+="Go Blue"
+		}
 </script>
 
 </head>
-<body>
+<body onload="displayInformation ();">
 	<h1>Your name goes here</h1>
 
 	<ol>
@@ -69,4 +75,5 @@
 	</div>
 
 </body>
+
 </html>
